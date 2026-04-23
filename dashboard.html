@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>H2_CORE | Painel de Controle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">H2_CORE HYBRID</a>
+        <select id="kitSelect" class="kit-selector" onchange="changeKit()">
+            <option value="TURBO">MODO TURBO</option>
+            <option value="BITURBO">MODO BITURBO</option>
+            <option value="SUPERCHARGER">MODO SUPERCHARGER</option>
+        </select>
+    </nav>
+
+    <main class="content-section">
+        <div class="grid-dash">
+            <div class="stat-card" style="border-top: 4px solid var(--neon-blue);">
+                <div style="opacity:0.6; font-size: 0.9rem;">ROTAÇÃO & VAZÃO H2</div>
+                <div class="stat-value" id="rpm">0</div>
+                <div id="h2-flow" style="color:var(--neon-blue);">0.00 L/min</div>
+            </div>
+
+            <div class="stat-card" style="border-top: 4px solid var(--porsche-orange);">
+                <div style="opacity:0.6; font-size: 0.9rem;">VÁLVULA TMM (PORSCHE)</div>
+                <div class="stat-value" id="tmm" style="color:var(--porsche-orange);">0%</div>
+                <div id="temp-val" style="color:var(--porsche-orange);">MOTOR FRIO</div>
+            </div>
+
+            <div class="stat-card" style="border-top: 4px solid var(--solar-gold);">
+                <div style="opacity:0.6; font-size: 0.9rem;">CARGA SOLAR ATIVA</div>
+                <div class="stat-value" id="solar" style="color:var(--solar-gold);">0.0V</div>
+                <div style="color:var(--solar-gold);">STATUS: CAPTANDO</div>
+            </div>
+        </div>
+
+        <div class="glass-card" style="margin-top:20px; padding: 1.5rem;">
+            <h3>LOG DE DADOS SQL (TELEMETRIA INTEGRADA)</h3>
+            <div id="sql-log" style="font-family:monospace; color:#00ff88; font-size:0.85rem; background: #000; padding: 15px; border-radius: 10px; overflow-x: auto;">
+                Aguardando conexão com os sensores...
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

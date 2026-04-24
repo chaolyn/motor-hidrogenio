@@ -10,10 +10,10 @@ function toggleSystem() {
     if (!isSystemActive) {
         btn.innerText = "RESUME SYSTEM";
         btn.classList.add('active');
-        status.innerText = "!!! H2 DESAATIVADO !!!";
+        status.innerText = "!!! H2 DESATIVADO !!!";
         status.className = "status-offline";
     } else {
-        btn.innerText = "EMERGENCY STOP";
+        btn.innerText = "H2 DESATIVADO";
         btn.classList.remove('active');
         status.innerText = "SISTEMA OPERACIONAL";
         status.className = "status-online";

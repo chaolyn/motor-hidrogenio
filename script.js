@@ -10,7 +10,7 @@ function toggleSystem() {
     if (!isSystemActive) {
         btn.innerText = "RESUME SYSTEM";
         btn.classList.add('active');
-        status.innerText = "!!! EMERGENCY SHUTDOWN ACTIVE !!!";
+        status.innerText = "!!! H2 DESAATIVADO !!!";
         status.className = "status-offline";
     } else {
         btn.innerText = "EMERGENCY STOP";
@@ -26,7 +26,6 @@ function changeKit() {
 
 function updateSimulation() {
     if (!isSystemActive) {
-        // Se o sistema parar, zeramos o H2 e abrimos a válvula Porsche 100% por segurança
         document.getElementById('h2-vazao').innerText = "0.00";
         document.getElementById('tmm').innerText = "100%";
         document.getElementById('sql-log').innerText = `-- EMERGENCY: Injeção cortada. Válvula TMM aberta 100%.`;

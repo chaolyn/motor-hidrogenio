@@ -48,3 +48,56 @@ h2 { font-size: 1.3rem; margin-top: 2rem; border-left: 4px solid var(--neon-blue
     background: var(--neon-blue); color: #000; border: none;
     padding: 10px 20px; font-family: 'Orbitron'; font-weight: 700; border-radius: 5px; cursor: pointer;
 }
+
+
+:root {
+    --neon-blue: #00f2ff;
+    --porsche-orange: #ff5e00;
+    --solar-gold: #ffcc00;
+    --danger-red: #ff0033;
+    --bg-dark: #020408;
+    --card-bg: rgba(10, 15, 25, 0.9);
+}
+
+body.fueltech-theme {
+    background-color: var(--bg-dark);
+    background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), 
+                      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+    background-size: 30px 30px; /* Efeito de grade industrial */
+    color: #fff; font-family: 'Rajdhani', sans-serif;
+}
+
+/* Botão de Emergência Estilo "Racing" */
+.emergency-btn {
+    background: var(--danger-red);
+    color: white; border: none;
+    padding: 10px 25px; font-family: 'Orbitron';
+    font-weight: bold; border-radius: 4px;
+    cursor: pointer; box-shadow: 0 0 15px var(--danger-red);
+    transition: 0.3s;
+}
+.emergency-btn.active {
+    background: #550000; box-shadow: none; filter: grayscale(1);
+}
+
+.status-online {
+    text-align: center; background: rgba(0, 255, 136, 0.1);
+    color: #00ff88; padding: 10px; margin-bottom: 20px;
+    border-radius: 5px; font-weight: bold; border: 1px solid #00ff88;
+}
+.status-offline {
+    text-align: center; background: rgba(255, 0, 51, 0.1);
+    color: var(--danger-red); padding: 10px; margin-bottom: 20px;
+    border-radius: 5px; font-weight: bold; border: 1px solid var(--danger-red);
+}
+
+.stat-card {
+    background: var(--card-bg); border-radius: 10px;
+    padding: 30px; text-align: center; border-bottom: 5px solid #333;
+}
+.h2-border { border-color: var(--neon-blue); box-shadow: 0 10px 30px rgba(0, 242, 255, 0.1); }
+.porsche-border { border-color: var(--porsche-orange); }
+.solar-border { border-color: var(--solar-gold); }
+
+.stat-value { font-family: 'Orbitron'; font-size: 3.5rem; font-weight: 700; text-shadow: 0 0 15px currentColor; }
+.sql-code { background: #000; padding: 15px; color: #00ff88; font-family: monospace; border-radius: 5px; border: 1px solid #222; }
